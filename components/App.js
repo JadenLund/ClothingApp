@@ -5,16 +5,19 @@ import { Switch, Route } from "react-router-dom";
 function App() {
     <div>
         <Switch>
-            <Route path='/About'>
+            <Route exact to="/">
+                <Home />
+            </Route>
+            <Route path='/about'>
                 <About />
             </Route>
-            <Route path='/ClothingContainer'>
+            <Route path='/project1'>
                 <ClothingContainer />
             </Route>
-            <Route path='/RandomClothing'>
+            <Route path='/project2'>
                 <RandomClothing />
             </Route>
         </Switch>
-    </div>
+    </div >
 }
 export default App
