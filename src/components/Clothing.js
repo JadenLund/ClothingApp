@@ -6,5 +6,6 @@ return (
         clothing
     </div>
 )
+
 }
 export default Clothing
