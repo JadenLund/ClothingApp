@@ -6,18 +6,25 @@ import RandomClothing from './RandomOutfits';
 import NavBar from './NavBar';
 
 function Home() {
-    // const [pants, setPants] = useState([])
-    // const [shirts, setShirts] = useState([])
-    // useEffect(() => {
-    //     fetch('data.json')
-    //         .then(resp => resp.json())
-    //         .then(setPants) // Take and set our data from our fetch to the state of our poems
-    // }, [])
-    // useEffect(() => {
-    //     fetch('data.json')
-    //         .then(resp => resp.json())
-    //         .then(setShirts) // Take and set our data from our fetch to the state of our poems
-    // }, [])
+    const [shirts, setShirts] = useState([])
+    const [pants, setPants] = useState([])
+    const [random, setRandom] = useState([])
+  
+    useEffect(() => {
+        fetch('http://localhost:3000/shirts')
+            .then(resp => resp.json())
+            .then(setShirts) // Take and set our data from our fetch to the state of our poems
+    }, [])
+    useEffect(() => {
+        fetch('http://localhost:3000/pants')
+            .then(resp => resp.json())
+            .then(setPants) // Take and set our data from our fetch to the state of our poems
+    }, [])
+    useEffect(() => {
+        fetch('http://localhost:3000/random')
+            .then(resp => resp.json())
+            .then(setRandom) // Take and set our data from our fetch to the state of our poems
+    }, [])
 
     return (<div>
         <NavBar />
