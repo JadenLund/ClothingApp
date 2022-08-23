@@ -1,6 +1,10 @@
 import React from 'react'
 
 function Clothing(){
-    return <div></div>
+return (
+    <div>
+        clothing
+    </div>
+)
 }
 export default Clothing
