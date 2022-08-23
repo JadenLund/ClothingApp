@@ -2,7 +2,7 @@ import React from 'react'
 import NewClothingForm from './NewClothingForm'
 
 function ClothingContainer(){
-<div>
+return <div>
     <Clothing/>
     <NewClothingForm/>
 </div>

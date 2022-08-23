@@ -1,6 +1,6 @@
 import React from 'react'
 
 function RandomClothing(){
-<RenderRandom/>
+    return <RenderRandom/>
 }
 export default RandomClothing
