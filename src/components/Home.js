@@ -8,8 +8,8 @@ import NavBar from './NavBar';
 function Home() {
     const [shirts, setShirts] = useState([])
     const [pants, setPants] = useState([])
-    const [random, setRandom] = useState([])
-  
+    const [outfits, setOutfits] = useState([])
+
     useEffect(() => {
         fetch('http://localhost:3000/shirts')
             .then(resp => resp.json())
@@ -23,7 +23,7 @@ function Home() {
     useEffect(() => {
         fetch('http://localhost:3000/random')
             .then(resp => resp.json())
-            .then(setRandom) // Take and set our data from our fetch to the state of our poems
+            .then(setOutfits) // Take and set our data from our fetch to the state of our poems
     }, [])
 
     return (<div>
@@ -33,10 +33,10 @@ function Home() {
                 <About />
             </Route>
             <Route path='/project1'>
-                <ClothingContainer />
+                <ClothingContainer pants={pants} shirts={shirts}/>
             </Route>
             <Route path='/project2'>
-                <RandomClothing />
+                <RandomClothing outfits={outfits}/>
             </Route>
         </Switch>
     </div >)

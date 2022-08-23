@@ -1,11 +1,12 @@
 import React from 'react'
 
-function RenderRandom() {
+function RenderRandom({ outfit }) {
     //generate a random picture of someone in an outfit
+    const { content } = outfit
     return (
         <div>
-           random outfit
-        </div>
+            <img src={content}/>
+        </div >
     )
 }
 export default RenderRandom
