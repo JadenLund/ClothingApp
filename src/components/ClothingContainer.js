@@ -4,6 +4,7 @@ import NewPantsForm from './NewPantsForm'
 import Clothing from './Clothing'
 
 function ClothingContainer({ shirts, pants }) {
+    const [id, content] = shirts
     // const countUp = () => {
     //    for(let i = 0 ; i < key.length ; i++){
     //         console.log(key)
@@ -25,7 +26,9 @@ function ClothingContainer({ shirts, pants }) {
             <button > {'<'} </button>
             <h3>Tops</h3>
             <div className='shirts'>
+
                 {shirts.map(outfit => <Clothing outfit={outfit} key={outfit.id} />)}
+
             </div>
             
             <button> {'>'} </button>
@@ -33,7 +36,7 @@ function ClothingContainer({ shirts, pants }) {
             <button> {'<'} </button>
             <h3>Bottoms</h3>
             <div className='pants'>
-                {pants.map(outfit => <Clothing outfit={outfit} content={outfit.content} key={outfit.id} />)}
+                {/* {pants.map(outfit => <Clothing outfit={outfit} content={outfit.content} key={outfit.id} />)} */}
             </div>
             
             <button> {'>'} </button>

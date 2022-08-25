@@ -4,15 +4,19 @@ import About from './About';
 import ClothingContainer from './ClothingContainer'
 import RandomClothing from './RandomOutfits';
 import NavBar from './NavBar';
+
 import NewShirtForm from './NewShirtForm'
 import NewPantsForm from './NewPantsForm'
+
 
 function App() {
     const [shirts, setShirts] = useState([])
     const [pants, setPants] = useState([])
     const [outfits, setOutfits] = useState([])
+
     const [showShirtForm, setShowShirtForm] = useState(true)
     const [showPantsForm, setShowPantsForm] = useState(true)
+
 
     useEffect(() => {
         fetch('http://localhost:3000/shirts')
@@ -29,6 +33,7 @@ function App() {
             .then(resp => resp.json())
             .then(setOutfits) // Take and set our data from our fetch to the state of our poems
     }, [])
+
 
 
 
@@ -97,11 +102,12 @@ function App() {
         <button onClick={handlePantsFormClick}> Add New Pants</button>
             {showPantsForm ? null : <NewPantsForm handlePantsSubmit={handlePantsSubmit}/>}
         </div>
+
         <Switch>
             <Route exact path='/'>
                 <About />
             </Route>
-            
+
             <Route path='/project1'>
                 <ClothingContainer outfits={outfits} pants={pants} shirts={shirts} />
             </Route>
