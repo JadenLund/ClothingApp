@@ -1,9 +1,8 @@
-.random-outfits{
+/* body{
+  align-items: center;
+} */
 
-  max-height: 100px;
-  max-width: 100px;
-  margin: 20p
-}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -29,12 +28,13 @@ a:hover{
   background-color: rgb(137, 137, 255);
 }
 
-.random-outfits>div>img{
+.random-outfits>div>img, .shirts>div>img, .pants>div>img{
  
   max-width: 200px;
   max-height: 200px;
 }
 
 .random-outfits{
-  display: flex;
+  /* display: flex; */
+  flex-wrap: wrap;
 }
