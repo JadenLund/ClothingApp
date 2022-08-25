@@ -36,7 +36,7 @@ function ClothingContainer({ shirts, pants }) {
             <button> {'<'} </button>
             <h3>Bottoms</h3>
             <div className='pants'>
-                {pants.map(outfit => <Clothing outfit={outfit} content={outfit.content} key={outfit.id} />)}
+                {/* {pants.map(outfit => <Clothing outfit={outfit} content={outfit.content} key={outfit.id} />)} */}
             </div>
             
             <button> {'>'} </button>

@@ -14,7 +14,7 @@ function Clothing({shirts, pants}) {
     }
 
     const pantsNextSlide = () => {
-        setPantsCurrent(pantsCurrent === length -1 ? 0 : pantsCurrent + 1)
+        setPantsCurrent(pantsCurrent === pantsLength -1 ? 0 : pantsCurrent + 1)
     }
 
     const prevSlide = () => {
@@ -22,7 +22,7 @@ function Clothing({shirts, pants}) {
     }
 
     const pantsPrevSlide = () => {
-        setPantsCurrent(pantsCurrent === 0 ? length -1 : pantsCurrent - 1)
+        setPantsCurrent(pantsCurrent === 0 ? pantsLength -1 : pantsCurrent - 1)
     }
     // console.log(current)
 
@@ -31,7 +31,7 @@ function Clothing({shirts, pants}) {
         return null;
      }
 
-     if (!Array.isArray(pants) || pants.length <= 0) {
+     if (!Array.isArray(pants) || pants.pantsLength <= 0) {
         return null;
      }
     

@@ -5,7 +5,7 @@ function NewPantsForm({handlePantsSubmit}){
 return (
     <form className='pants-clothing-form' onSubmit={handlePantsSubmit}>
         <input name='content'  placeholder='Image Url'/>
-        <input type='submit' value='Add your Clothing' />
+        <input type='submit' value='Add your Pants' />
     </form>
 )
 }
