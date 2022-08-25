@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Switch, Route } from "react-router-dom";
 import About from './About';
-import ClothingContainer from './ClothingContainer'
+
 import RandomClothing from './RandomOutfits';
 import NavBar from './NavBar';
 import Clothing from './Clothing'
@@ -17,7 +17,7 @@ function App() {
 
     const [showShirtForm, setShowShirtForm] = useState(true)
     const [showPantsForm, setShowPantsForm] = useState(true)
-    
+
 
 
     useEffect(() => {
@@ -62,12 +62,12 @@ function App() {
         fetch('http://localhost:3000/shirts', {
             method: 'POST',
             headers: {
-                'Content-Type':'application/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(newShirt)
         })
-        .then(res => res.json())
-        .then(newShirtData => handleAddNewShirt(newShirtData))
+            .then(res => res.json())
+            .then(newShirtData => handleAddNewShirt(newShirtData))
         // .then(console.log)
 
     }
@@ -75,7 +75,7 @@ function App() {
     function handlePantsSubmit(e) {
         e.preventDefault();
 
-        const newPants ={
+        const newPants = {
             content: e.target.content.value,
         }
         // console.log(newPants)
@@ -83,41 +83,44 @@ function App() {
         fetch('http://localhost:3000/pants', {
             method: 'POST',
             headers: {
-                'Content-Type':'application/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(newPants)
         })
-        .then(res => res.json())
-        .then(newPantsData => setPants([...pants, newPantsData]))
+            .then(res => res.json())
+            .then(newPantsData => setPants([...pants, newPantsData]))
     }
 
-    
+
 
     return (
-    <div>
-        <NavBar />
-       
+        <div>
+            <NavBar />
 
-        <Switch>
-            <Route exact path='/'>
-                <About />
-            </Route>
 
-            <Route path='/project1'>
-            <div className='sidebar'>
-            <button className='add-new-shirt' onClick={handleShirtFormClick}>Add New Shirt</button>
-            {showShirtForm ? null : <NewShirtForm handleShirtSubmit={handleShirtSubmit}/>}
-        </div>
-        <div className='sidebar-2'>
-        <button className='add-new-pants' onClick={handlePantsFormClick}> Add New Pants</button>
-            {showPantsForm ? null : <NewPantsForm handlePantsSubmit={handlePantsSubmit}/>}
-        </div>
-                <Clothing shirts={shirts} pants={pants}/>
-            </Route>
-            <Route path='/project2'>
-                <RandomClothing outfits={outfits} />
-            </Route>
-        </Switch>
-    </div >)
+            <Switch>
+                <Route exact path='/'>
+                    <About />
+                </Route>
+
+                <Route path='/project1'>
+                    <div className='sidebar'>
+                        <button className='add-new-shirt' onClick={handleShirtFormClick}>Add New Shirt</button>
+                        {showShirtForm ? null : <NewShirtForm handleShirtSubmit={handleShirtSubmit} />}
+                    </div>
+                    <div className='sidebar-2'>
+                        <button className='add-new-pants' onClick={handlePantsFormClick}> Add New Pants</button>
+                        {showPantsForm ? null : <NewPantsForm handlePantsSubmit={handlePantsSubmit} />}
+                    </div>
+
+                    
+
+                    <Clothing shirts={shirts} pants={pants} />
+                </Route>
+                <Route path='/project2'>
+                    <RandomClothing outfits={outfits} />
+                </Route>
+            </Switch>
+        </div >)
 }
 export default App
