@@ -12,6 +12,7 @@ function ClothingContainer({ shirts, pants }) {
     // const countDown = () => {
 
     // }
+    console.log(shirts)
 
     return (
         <div>
@@ -24,7 +25,7 @@ function ClothingContainer({ shirts, pants }) {
             <button > {'<'} </button>
             <h3>Tops</h3>
             <div className='shirts'>
-                {shirts.map(outfit => <Clothing outfit={outfit} content={outfit.content} key={outfit.id} />)}
+                {shirts.map(outfit => <Clothing outfit={outfit} key={outfit.id} />)}
             </div>
             
             <button> {'>'} </button>

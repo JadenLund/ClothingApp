@@ -1,10 +1,10 @@
 import React from 'react'
 
 function Clothing({ outfit }) {
-    const { content } = outfit
+    // const { content } = outfit
     return (
         <div>
-            <img src={content} />
+            <img src={outfit.content} />
         </div>
     )
 }

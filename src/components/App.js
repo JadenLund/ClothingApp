@@ -36,6 +36,10 @@ function App() {
         setShowShirtForm(!showShirtForm);
     }
 
+    const handleAddNewShirt = (newShirtData) => {
+        setShirts([...shirts, newShirtData])
+    }
+
     const handlePantsFormClick = () => {
         setShowPantsForm(showPantsForm => !showPantsForm);
     }
@@ -56,7 +60,8 @@ function App() {
             body: JSON.stringify(newShirt)
         })
         .then(res => res.json())
-        .then(newShirtData => setShirts({...shirts, newShirtData}))
+        .then(newShirtData => handleAddNewShirt(newShirtData))
+        // .then(console.log)
 
     }
 
