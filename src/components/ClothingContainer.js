@@ -1,5 +1,6 @@
 import React from 'react'
-import NewClothingForm from './NewClothingForm'
+import NewShirtForm from './NewShirtForm'
+import NewPantsForm from './NewPantsForm'
 import Clothing from './Clothing'
 
 function ClothingContainer({ shirts, pants }) {
@@ -14,6 +15,7 @@ function ClothingContainer({ shirts, pants }) {
 
     return (
         <div>
+            
             <div className='saved-outfits'>
                 <h2>Saved Outfits</h2>
                 <h3>this is where saved outfits will go</h3>
@@ -24,7 +26,7 @@ function ClothingContainer({ shirts, pants }) {
             <div className='shirts'>
                 {shirts.map(outfit => <Clothing outfit={outfit} content={outfit.content} key={outfit.id} />)}
             </div>
-            <NewClothingForm />
+            
             <button> {'>'} </button>
 
             <button> {'<'} </button>
@@ -32,7 +34,7 @@ function ClothingContainer({ shirts, pants }) {
             <div className='pants'>
                 {pants.map(outfit => <Clothing outfit={outfit} content={outfit.content} key={outfit.id} />)}
             </div>
-            <NewClothingForm />
+            
             <button> {'>'} </button>
         </div>
     )
