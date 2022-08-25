@@ -19,6 +19,25 @@ code {
     monospace;
 }
 
+.add-new-shirt {
+  position: relative;
+  height: 4vh;
+  justify-content: center;
+  align-items: center;
+  left: 420px;
+  top: -20px;
+}
+
+.add-new-pants {
+  position: relative;
+  height: 4vh;
+  justify-content: center;
+  align-items: center;
+  left: 525px;
+  top: -58px;
+}
+
+
 .slider {
   position: relative;
   height: 30vh;

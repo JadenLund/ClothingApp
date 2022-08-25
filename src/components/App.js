@@ -104,11 +104,11 @@ function App() {
 
             <Route path='/project1'>
             <div className='sidebar'>
-            <button onClick={handleShirtFormClick}>Add New Shirt</button>
+            <button className='add-new-shirt' onClick={handleShirtFormClick}>Add New Shirt</button>
             {showShirtForm ? null : <NewShirtForm handleShirtSubmit={handleShirtSubmit}/>}
         </div>
         <div className='sidebar-2'>
-        <button onClick={handlePantsFormClick}> Add New Pants</button>
+        <button className='add-new-pants' onClick={handlePantsFormClick}> Add New Pants</button>
             {showPantsForm ? null : <NewPantsForm handlePantsSubmit={handlePantsSubmit}/>}
         </div>
                 <ClothingContainer outfits={outfits} pants={pants} shirts={shirts} />
