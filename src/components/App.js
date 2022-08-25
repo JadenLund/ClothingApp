@@ -81,7 +81,7 @@ function App() {
             body: JSON.stringify(newPants)
         })
         .then(res => res.json())
-        .then(newPantsData => setPants({...pants, newPantsData}))
+        .then(newPantsData => setPants([...pants, newPantsData]))
     }
 
     
