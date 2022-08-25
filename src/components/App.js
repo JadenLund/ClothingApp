@@ -112,7 +112,7 @@ function App() {
         <button onClick={handlePantsFormClick}> Add New Pants</button>
             {showPantsForm ? null : <NewPantsForm handlePantsSubmit={handlePantsSubmit}/>}
         </div>
-                <ClothingContainer outfits={outfits} pants={pants} shirts={shirts} />
+                {/* <ClothingContainer outfits={outfits} pants={pants} shirts={shirts} /> */}
                 <Clothing shirts={shirts} pants={pants}/>
             </Route>
             <Route path='/project2'>
