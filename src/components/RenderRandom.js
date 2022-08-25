@@ -6,6 +6,7 @@ function RenderRandom({ outfit }) {
     return (
         <div>
             <img src={content}/>
+            <button className='random-favorites-btn'>Add to favorites</button>
         </div >
     )
 }
