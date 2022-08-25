@@ -28,15 +28,16 @@ function Home() {
 
     return (<div>
         <NavBar />
+  
         <Switch>
-            <Route path='/about'>
+            <Route exact path='/'>
                 <About />
             </Route>
             <Route path='/project1'>
-                <ClothingContainer pants={pants} shirts={shirts}/>
+                <ClothingContainer outfits={outfits} pants={pants} shirts={shirts} />
             </Route>
             <Route path='/project2'>
-                <RandomClothing outfits={outfits}/>
+                <RandomClothing outfits={outfits} />
             </Route>
         </Switch>
     </div >)

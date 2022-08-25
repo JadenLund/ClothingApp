@@ -28,3 +28,13 @@ a{
 a:hover{
   background-color: rgb(137, 137, 255);
 }
+
+.random-outfits>div>img{
+ 
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.random-outfits{
+  display: flex;
+}
