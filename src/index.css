@@ -1,9 +1,8 @@
-.random-outfits{
+/* body{
+  align-items: center;
+} */
 
-  max-height: 100px;
-  max-width: 100px;
-  margin: 20p
-}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,22 +18,37 @@ code {
 }
 
 
-a{
+a {
   padding: 20px;
   font-family: 'Courier New';
   font-weight: bolder;
   background-color: rgb(160, 160, 255);
 }
-a:hover{
+
+a:hover {
   background-color: rgb(137, 137, 255);
 }
 
-.random-outfits>div>img{
- 
+
+.random-outfits>div>img,
+.shirts>div>img,
+.pants>div>img {
+
   max-width: 200px;
   max-height: 200px;
 }
 
-.random-outfits{
+.random-favorites-btn {
   display: flex;
+  border-radius: 5px;
+}
+
+.random-favorites-btn:active{
+  background-color: darkgrey;
+}
+
+.random-outfits {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 50%
 }

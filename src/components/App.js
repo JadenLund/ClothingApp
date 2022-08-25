@@ -5,7 +5,7 @@ import ClothingContainer from './ClothingContainer'
 import RandomClothing from './RandomOutfits';
 import NavBar from './NavBar';
 
-function Home() {
+function App() {
     const [shirts, setShirts] = useState([])
     const [pants, setPants] = useState([])
     const [outfits, setOutfits] = useState([])
@@ -42,4 +42,4 @@ function Home() {
         </Switch>
     </div >)
 }
-export default Home
+export default App
