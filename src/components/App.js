@@ -4,6 +4,7 @@ import About from './About';
 import ClothingContainer from './ClothingContainer'
 import RandomClothing from './RandomOutfits';
 import NavBar from './NavBar';
+import Clothing from './Clothing'
 
 import NewShirtForm from './NewShirtForm'
 import NewPantsForm from './NewPantsForm'
@@ -76,7 +77,7 @@ function App() {
         const newPants ={
             content: e.target.content.value,
         }
-        console.log(newPants)
+        // console.log(newPants)
 
         fetch('http://localhost:3000/pants', {
             method: 'POST',
@@ -94,14 +95,7 @@ function App() {
     return (
     <div>
         <NavBar />
-        <div className='sidebar'>
-            <button onClick={handleShirtFormClick}>Add New Shirt</button>
-            {showShirtForm ? null : <NewShirtForm handleShirtSubmit={handleShirtSubmit}/>}
-        </div>
-        <div className='sidebar-2'>
-        <button onClick={handlePantsFormClick}> Add New Pants</button>
-            {showPantsForm ? null : <NewPantsForm handlePantsSubmit={handlePantsSubmit}/>}
-        </div>
+       
 
         <Switch>
             <Route exact path='/'>
@@ -109,7 +103,16 @@ function App() {
             </Route>
 
             <Route path='/project1'>
+            <div className='sidebar'>
+            <button onClick={handleShirtFormClick}>Add New Shirt</button>
+            {showShirtForm ? null : <NewShirtForm handleShirtSubmit={handleShirtSubmit}/>}
+        </div>
+        <div className='sidebar-2'>
+        <button onClick={handlePantsFormClick}> Add New Pants</button>
+            {showPantsForm ? null : <NewPantsForm handlePantsSubmit={handlePantsSubmit}/>}
+        </div>
                 <ClothingContainer outfits={outfits} pants={pants} shirts={shirts} />
+                <Clothing shirts={shirts} pants={pants}/>
             </Route>
             <Route path='/project2'>
                 <RandomClothing outfits={outfits} />
