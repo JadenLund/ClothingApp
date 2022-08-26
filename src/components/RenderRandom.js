@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 
 function RenderRandom({ outfit, addFavorite, isFavorite, remFavorite }) {
-    //generate a random picture of someone in an outfit
     const { content } = outfit
-   
 
     return (
         <div>
