@@ -8,11 +8,12 @@ body {
   background-color: rgb(255, 226, 173);
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
-.favorite-outfits{
+.favorite-outfits {
   min-height: 200px;
 }
 
@@ -149,16 +150,6 @@ code {
   user-select: none;
 }
 
-.slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
-}
 
 a {
   padding: 20px;
@@ -171,30 +162,21 @@ a:hover {
   background-color: rgb(137, 137, 255);
 }
 
-.random-outfits>div>img, .favorite-outfits>div>img {
+.random-outfits>div>img,
+.favorite-outfits>div>img {
   border-radius: 20px;
   border: 3px dashed rgb(137, 137, 255);
 
-}
-
-.random-outfits>div>img:hover, .favorite-outfits>div>img:hover {
-  border-radius: 20px;
-  border: 3px solid rgb(100, 100, 219);
 }
 
 .random-outfits>div>img {
   margin: 15px;
 }
 
-
-
-
-.random-outfits>div>img,
-.shirts>div>img,
-.pants>div>img {
-
-  max-width: 200px;
-  max-height: 200px;
+.random-outfits>div>img:hover,
+.favorite-outfits>div>img:hover {
+  border-radius: 20px;
+  border: 3px solid rgb(100, 100, 219);
 }
 
 .favorite-outfits>div>img {
@@ -204,24 +186,39 @@ a:hover {
   border-radius: 20px;
 }
 
-.random-outfits>div>button{
-  margin: -40px;
+
+.random-outfits>div>img,
+.shirts>div>img,
+.pants>div>img {
+  max-width: 200px;
+  max-height: 200px;
 }
 
-.random-outfits>div{
+
+/* .random-outfits>div>button {
+  margin-top: -10px;
+  position: absolute;
+} */
+
+.random-outfits>div {
   padding-bottom: 40px;
 }
 
 .random-favorites-btn {
   display: flex;
-  border-radius: 5px;
+  margin-left: 14px;
+  margin-top: -51px;
+  position: absolute;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 7px;
   border-color: rgb(100, 100, 219);
   border: 2px dashed rgb(137, 137, 255);
 }
 
 .random-favorites-btn:hover {
   border: 2px solid rgb(123, 123, 255);
-  background-color: rgb(197, 121, 255);
+  background-color: rgb(234, 218, 255);
 }
 
 .random-favorites-btn:active {
