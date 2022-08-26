@@ -169,7 +169,8 @@ a:hover {
 
 }
 
-.random-outfits>div>img {
+.random-outfits>div>img,
+.favorite-outfits>div>img {
   margin: 15px;
 }
 
@@ -179,26 +180,12 @@ a:hover {
   border: 3px solid rgb(100, 100, 219);
 }
 
-.favorite-outfits>div>img {
-  max-width: 170px;
-  max-height: 170px;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-
 .random-outfits>div>img,
 .shirts>div>img,
 .pants>div>img {
   max-width: 200px;
   max-height: 200px;
 }
-
-
-/* .random-outfits>div>button {
-  margin-top: -10px;
-  position: absolute;
-} */
 
 .random-outfits>div {
   padding-bottom: 40px;
@@ -214,6 +201,16 @@ a:hover {
   border-radius: 7px;
   border-color: rgb(100, 100, 219);
   border: 2px dashed rgb(137, 137, 255);
+}
+
+.favorite-outfits>div>img {
+  max-width: 170px;
+  max-height: 170px;
+}
+
+.favorite-outfits>div>button {
+  margin-left: 14px;
+  margin-top: -51px;
 }
 
 .random-favorites-btn:hover {

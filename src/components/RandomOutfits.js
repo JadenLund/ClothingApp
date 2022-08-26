@@ -11,7 +11,11 @@ function RandomOutfits({ outfits }) {
 
     // console.log(favorite)
     function addFavorite(outfit) {
-        setFavoriteOutfits([...favoriteOutfits, outfit])
+        if (favoriteOutfits.find(obj => obj.id === outfit.id)) {
+            setFavoriteOutfits([...favoriteOutfits])
+        }
+        else setFavoriteOutfits([...favoriteOutfits, outfit])
+        // setFavoriteOutfits([...favoriteOutfits, outfit])
     }
     
     function remFavorite(outfit) {
