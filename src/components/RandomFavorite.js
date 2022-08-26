@@ -1,14 +1,9 @@
 import React from "react";
 import RenderRandom from "./RenderRandom";
 
-function RandomFavorite({ outfit }) {
-   
-    return (
-        <div className='favorites'>
+function RandomFavorite({ outfit, remFavorite }) {
 
-            <RenderRandom outfit={outfit} />
-        </div>
-    )
+    return <RenderRandom isFavorite={true} outfit={outfit} remFavorite={remFavorite} />
 
 }
 export default RandomFavorite

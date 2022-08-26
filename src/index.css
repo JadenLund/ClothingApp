@@ -8,6 +8,14 @@ body {
   background-color: rgb(255, 226, 173);
 }
 
+h1, h2 {
+  text-align: center;
+}
+
+.favorite-outfits{
+  min-height: 200px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -72,14 +80,14 @@ code {
 }
 
 .right-arrow {
-position: absolute;
-top: 50%;
-right: 300px;
-font-size: 3rem;
-color: black;
-z-index: 10;
-cursor: pointer;
-user-select:none;
+  position: absolute;
+  top: 50%;
+  right: 300px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
 .left-arrow {
@@ -90,8 +98,8 @@ user-select:none;
   color: black;
   z-index: 10;
   cursor: pointer;
-  user-select:none;
-  }
+  user-select: none;
+}
 
 .slide {
   opacity: 0;
@@ -120,14 +128,14 @@ user-select:none;
 }
 
 .pants-right-arrow {
-position: absolute;
-top: 50%;
-right: 300px;
-font-size: 3rem;
-color: black;
-z-index: 10;
-cursor: pointer;
-user-select:none;
+  position: absolute;
+  top: 50%;
+  right: 300px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
 .pants-left-arrow {
@@ -138,8 +146,8 @@ user-select:none;
   color: black;
   z-index: 10;
   cursor: pointer;
-  user-select:none;
-  }
+  user-select: none;
+}
 
 .slide {
   opacity: 0;
@@ -163,21 +171,24 @@ a:hover {
   background-color: rgb(137, 137, 255);
 }
 
-.random-outfits>div>img:hover {
-
-  border: 3px solid rgb(100, 100, 219);
-}
-
-.random-outfits>div{
-    padding: 15px;
-}
-
-.random-outfits>div>img {
+.random-outfits>div>img, .favorite-outfits>div>img {
+  border-radius: 20px;
   border: 3px dashed rgb(137, 137, 255);
 
 }
 
-.favorites>div>img,
+.random-outfits>div>img:hover, .favorite-outfits>div>img:hover {
+  border-radius: 20px;
+  border: 3px solid rgb(100, 100, 219);
+}
+
+.random-outfits>div>img {
+  margin: 15px;
+}
+
+
+
+
 .random-outfits>div>img,
 .shirts>div>img,
 .pants>div>img {
@@ -186,18 +197,40 @@ a:hover {
   max-height: 200px;
 }
 
+.favorite-outfits>div>img {
+  max-width: 170px;
+  max-height: 170px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.random-outfits>div>button{
+  margin: -40px;
+}
+
+.random-outfits>div{
+  padding-bottom: 40px;
+}
+
 .random-favorites-btn {
   display: flex;
   border-radius: 5px;
+  border-color: rgb(100, 100, 219);
+  border: 2px dashed rgb(137, 137, 255);
+}
+
+.random-favorites-btn:hover {
+  border: 2px solid rgb(123, 123, 255);
+  background-color: rgb(197, 121, 255);
 }
 
 .random-favorites-btn:active {
   background-color: darkgrey;
 }
 
-.random-outfits {
+.random-outfits,
+.favorite-outfits {
   display: flex;
   flex-wrap: wrap;
   flex: 50%
 }
-
