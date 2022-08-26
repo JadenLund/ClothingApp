@@ -5,13 +5,16 @@ import RenderRandom from './RenderRandom'
 
 function RandomOutfits({ outfits }) {
     const [favoriteOutfits, setFavoriteOutfits] = useState([])
+    // const [favorite, setFavorite] = useState(false)
 
-
+    // console.log(favorite)
     function addFavorite(outfit) {
-        setFavoriteOutfits([...favoriteOutfits, outfit])
-    console.log(outfit)
+        if (Object.values(favoriteOutfits).includes(outfit)) {
+            setFavoriteOutfits([...favoriteOutfits])
+        }
+        else setFavoriteOutfits([...favoriteOutfits, outfit])
     }
-    
+
 
     return (
         <div>
